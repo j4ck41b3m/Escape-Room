@@ -30,7 +30,7 @@ public class WitActivator : MonoBehaviour
         if (timer >= 10)
         {
             wit.Deactivate();
-
+            pressed = false;
         }
     }
 
@@ -38,6 +38,11 @@ public class WitActivator : MonoBehaviour
     {
         if (!wit) wit = GetComponent<Wit>();
         timer = 0;
+    }
+
+    public void MicOn()
+    {
+        pressed = true;
     }
 
 }
